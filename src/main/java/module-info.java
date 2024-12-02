@@ -10,6 +10,8 @@ module org.example.todolist {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires com.google.gson;
+    opens org.example.todolist.Manager to com.google.gson;
 
     opens org.example.todolist to javafx.fxml;
     exports org.example.todolist;
