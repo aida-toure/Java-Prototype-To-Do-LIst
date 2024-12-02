@@ -55,7 +55,6 @@ public class Task {
     }
     /** the task submitted will be */
     public void RetrieveData(){
-        DataManager.setIndexFreeSlot(0);
         try(FileReader reader = new FileReader(DataManager.tasksJSONPath)){
             // Note : type is used to
             Type listType = new TypeToken<List<Task>>(){}.getType();
@@ -78,7 +77,6 @@ public class Task {
                         System.out.println("priority: " + task.getPriority());
                     }
                 }
-                //DataManager.setIndexFreeSlot(DataManager.getIndexFreeSlot() + 1);
             }
         }catch (IOException e){
             System.out.println("Uh, Oh something went wrong about retrieving your tasks");

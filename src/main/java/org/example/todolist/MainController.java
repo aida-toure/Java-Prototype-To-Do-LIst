@@ -18,18 +18,12 @@ public class MainController {
 
 
     public void onCreateButtonClick(ActionEvent actionEvent) {
-        /** this is your */
-        Task newTask = new Task( "Backend - To Do List Application", "work on ", 1);
+        /** this is where you put the information's task */
+        Task newTask = new Task( "task1", "description1 ", 1);
         System.out.println(DataManager.getIndexFreeSlot());
         Task[] newTaskToArray = new Task[DataManager.maximumTasksSlots];
         newTaskToArray[DataManager.getIndexFreeSlot()] = newTask;
         newTask.StoreData(newTaskToArray);
         newTask.RetrieveData();
-
-        Task newTask1 = new Task( "Backend - To Do List Application", "fix an issue about index of json", 1);
-        System.out.println(DataManager.getIndexFreeSlot());
-        newTaskToArray[DataManager.getIndexFreeSlot()] = newTask1;
-        newTask1.StoreData(newTaskToArray);
-        newTask1.RetrieveData();
     }
 }
