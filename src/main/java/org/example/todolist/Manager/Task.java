@@ -73,7 +73,9 @@ public class Task {
                         System.out.println("task empty");
                     }else {
                         DataManager.setIndexFreeSlot(DataManager.getIndexFreeSlot() + 1);
-                        System.out.println(task.getDescription());
+                        System.out.println("title: " + task.getTitle());
+                        System.out.println("description: " + task.getDescription());
+                        System.out.println("priority: " + task.getPriority());
                     }
                 }
                 DataManager.setIndexFreeSlot(DataManager.getIndexFreeSlot() + 1);
